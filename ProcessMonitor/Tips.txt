@@ -1,7 +1,11 @@
-﻿
 1、安装服务
+代码编写完毕后，生成解决方案，此时可在Debug目录中找到编译好的ProcessMonitor.exe。
+安装服务可以通过VS提供的InstallUtil工具实现，用管理员身份打开VS开发人员命令提示，输入命令：
+InstallUtil ProcessMonitor.exe所在绝对路径
 
 2、卸载服务
+如果需要卸载此服务，在安装命令的基础上，添加一个命令行参数 /u 即可：
+InstallUtil /u ProcessMonitor.exe所在绝对路径
 
 3、删除服务
 以管理员身份运行Cmd，在Cmd里输入：SC delete ServiceName ，即可删除该服务
